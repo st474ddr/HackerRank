@@ -1,0 +1,1 @@
+﻿mysql 的 substr開始位置是1
