@@ -1,0 +1,4 @@
+﻿mysql 要印出 star pattern
+1.善用 repeat函式來呈現迴圈
+2.因為要產生20筆資料 所以要找一個資料數>20的資料表 此使用mysql內建資料表:information_schema.tables
+3.限制show 20 筆
