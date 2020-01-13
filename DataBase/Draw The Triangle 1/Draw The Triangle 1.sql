@@ -1,0 +1,1 @@
+select repeat('* ',@R := @R - 1) from information_schema.tables,(select @R := 21) t limit 20
