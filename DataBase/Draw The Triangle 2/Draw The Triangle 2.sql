@@ -1,0 +1,1 @@
+select repeat('* ',@num := @num + 1) from (select @num := 0) s,information_schema.tables limit 20
