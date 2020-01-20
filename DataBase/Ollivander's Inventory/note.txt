@@ -1,0 +1,17 @@
+第一種解法
+先使用group by 對Wands做分類
+找出擁有最小值coins_needed的code,power
+再去以相同條件join Wands取得 id
+接著再join Wands_Property 取得age 並設定 is_evid = 0 
+最後排序
+
+第二種解法
+兩個table先inner join，選出non evil
+合併後的table中,如果power和age相同,則選擇最小的coins needed
+而同時,要提取所對應的ID
+如果使用group by power,age,則這裡的id不能用min或者max提取出對應的id
+因此合併後的table只需要提取出相同power和age時最小coins needed即可
+
+第三種解法
+分出好的Wands 和 最便宜的 Wands
+再用natural join
