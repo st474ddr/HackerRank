@@ -1,0 +1,27 @@
+1.
+如果要用group by count
+必須把count 包在subquery裡面
+像是
+SELECT
+    `Shifts`, COUNT(`User`) `Users`
+FROM (  
+    SELECT , 
+        user_id AS `User`,
+        COUNT( schedule_id ) AS `Shifts`
+    FROM 
+        schedule
+    GROUP BY 
+        `User`
+) s
+GROUP BY `Shifts`
+
+2.
+若要order by union
+統整後的必須是兩個query的共同欄位值
+
+3.
+having count(c.hacker_id)
+和
+count(c.hacker_id) as cnt
+having cnt 
+是不一樣的
