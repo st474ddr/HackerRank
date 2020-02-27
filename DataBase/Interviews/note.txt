@@ -1,0 +1,4 @@
+第一種解法:
+先合併所有相同challenge的total_unique_views,total_views,total_submissions,total_accepted_submissions
+再合併所有相同college的challenge
+最後合併所有相同contest的college
