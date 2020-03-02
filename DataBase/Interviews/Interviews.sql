@@ -18,4 +18,10 @@ join(
 	) s
 	on (cha.challenge_id = s.challenge_id)
 	group by college_id
-)
+) g
+group by con.contest_id, con.hacker_id, con.name
+having sum(total_submissions)!=0 or 
+       sum(total_accepted_submissions)!=0 or
+       sum(total_views)!=0 or
+       sum(total_unique_views)!=0
+order by contest_id;
